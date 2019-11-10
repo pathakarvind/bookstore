@@ -1,0 +1,7 @@
+.grid-row {
+    margin-top: 15px;
+}
+
+::ng-deep.mat-paginator .mat-paginator-container{
+  width: 100%;
+}

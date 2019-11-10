@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-md-10">
+        <input type="text" class="form-control" id="searchBox" placeholder="Search" [formControl]="searchCtrl">
+    </div>
+    <div class="col-md-2">
+        <input type="button" class="btn btn-primary" value="Search" (click)="getBooks()" [disabled]="!searchCtrl.value">
+    </div>
+</div>
+<div class="row grid-row">
+    <div class="col-md-12 inventory">
+        <app-book-grid [inventoryData]="books" (addToFavourites)="onAddFaviourites($event)"></app-book-grid>
+    </div>
+    <div class="col-md-12">
+        <mat-paginator [pageSize]="pagingOptions.pageSize" [length]="pagingOptions.totalSize"
+            [pageIndex]="pagingOptions.currentPage" (page)="pageEvent = getBooks($event)"></mat-paginator>
+    </div>
+</div>
