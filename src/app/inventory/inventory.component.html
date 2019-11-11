@@ -11,7 +11,7 @@
         <app-book-grid [inventoryData]="books" (addToFavourites)="onAddFaviourites($event)"></app-book-grid>
     </div>
     <div class="col-md-12">
-        <mat-paginator [pageSize]="pagingOptions.pageSize" [length]="pagingOptions.totalSize"
-            [pageIndex]="pagingOptions.currentPage" (page)="pageEvent = getBooks($event)"></mat-paginator>
+        <mat-paginator [pageSize]="pagingOptions.pageSize" [length]="pagingOptions.length"
+            [pageIndex]="pagingOptions.pageIndex" (page)="getBooks($event)"></mat-paginator>
     </div>
 </div>

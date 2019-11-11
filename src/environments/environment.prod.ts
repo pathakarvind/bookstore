@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  BASE_URL: '',
+  ASSET_URL: '/assets/'
 };
